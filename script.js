@@ -1,23 +1,3 @@
-// Theme toggle -------------------------------------------------------------
-
-const toggle = document.getElementById("theme-toggle");
-
-function setTheme(theme) {
-  document.documentElement.dataset.theme = theme;
-  localStorage.setItem("theme", theme);
-  if (toggle) toggle.textContent = theme === "dark" ? "☀" : "☾";
-}
-
-if (toggle) {
-  toggle.textContent =
-    document.documentElement.dataset.theme === "dark" ? "☀" : "☾";
-  toggle.addEventListener("click", () => {
-    const next =
-      document.documentElement.dataset.theme === "dark" ? "light" : "dark";
-    setTheme(next);
-  });
-}
-
 // Scroll reveal ------------------------------------------------------------
 
 const observer = new IntersectionObserver(

@@ -4,13 +4,6 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Students — Carla Ferreira</title>
-<script>
-(function () {
-  var t = localStorage.getItem("theme") ||
-    (window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
-  document.documentElement.dataset.theme = t;
-})();
-</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
@@ -25,11 +18,8 @@
       <a href="index.html">Home</a>
       <a href="research.html">Research</a>
       <a href="publications.html">Publications</a>
-      <a href="events.html">Events</a>
       <a href="students.html" class="current">Students</a>
-      <a href="contact.html">Contact</a>
     </nav>
-    <button id="theme-toggle" aria-label="Toggle color theme"></button>
   </div>
 </header>
 
@@ -72,50 +62,32 @@
     <li><strong>Carlos Alberto Lourenço dos Santos</strong> (co-supervision with José Tribolet)<br>
       Modelo conceptual para auditoria organizacional contínua com análise em tempo real (2007)</li>
   </ul>
-
-  <h2>Concluded MSc students</h2>
-  <ul class="clean">
-    <li><strong>Ana Catarina Ribeiro</strong> — Invariant-driven automated testing (2020)</li>
-    <li><strong>Gualter Parada</strong> — Inferring likely data invariants (2020)</li>
-    <li><strong>Nuno Gomes</strong> — A semantic consistency model to reduce coordination
-      in replicated systems (2020)</li>
-    <li><strong>Alexandre Jacinto</strong> — Test mocks for low-code applications (2020)</li>
-    <li><strong>Filipe Meirim</strong> — Static verification of cloud applications with
-      Why3 (2019)</li>
-    <li><strong>Francisco Cunha</strong> — Optimizing service orchestration in OutSystems (2019)</li>
-    <li><strong>Miguel Loureiro</strong> — Security reports for OutSystems factories (2019)</li>
-    <li><strong>José Pedro Soares</strong> (co-supervision with Valter Balegas) —
-      Microservices framework for data consistency (2019)</li>
-    <li><strong>André Rijo</strong> (co-supervision with Nuno Preguiça) — Building custom
-      Replicated Data Types (2018)</li>
-    <li><strong>Paulo Figueira</strong> (co-supervision with João Costa Seco) — Automatic
-      test generation for embedded systems (2018)</li>
-    <li><strong>Miguel Ramos Duque</strong> — Specification of a partial replication
-      protocol with TLA+ (2015)</li>
-    <li><strong>Miguel Aires Teixeira</strong> — Transactional memory scheduler with
-      irrevocable support and selective rollback (2015)</li>
-    <li><strong>Diogo Sousa</strong> (co-supervision with João Lourenço) — Preventing
-      atomicity violations with contracts (2013)</li>
-    <li><strong>Paulo Ferreira</strong> (co-supervision with João Costa Seco) — Information
-      flow analysis using data-dependent logical propositions (2012)</li>
-    <li><strong>Ana Ferreira</strong> — Refinamento de diagramas de classes: análise e
-      verificação em Alloy (2010)</li>
-    <li><strong>Rui Costa</strong> — Mecanismos de recuperação para serviços Web (2010)</li>
-    <li><strong>Maria de Fátima Reis</strong> — Verificação de protocolos de e-voting (2009)</li>
-    <li><strong>Eunice Lee da Silva</strong> — Verificação de coerência de diagramas UML
-      com Alloy (2009)</li>
-    <li><strong>Hermínio Miguel Sanches</strong> — Um perfil UML 2.0 para modelação de
-      processos de negócio (2008)</li>
-    <li><strong>Miguel Brazia Santos</strong> — Estudo comparativo de métodos de
-      verificação de uma urgência hospitalar (2007)</li>
-  </ul>
 </main>
 
 <footer>
   <div class="footer-inner">
-    <span>© 2026 Carla Ferreira</span>
-    <span>NOVA University of Lisbon · NOVA LINCS</span>
+    <div class="footer-col">
+      <strong>Carla Ferreira</strong>
+      Computer Science Department<br>
+      NOVA School of Science and Technology<br>
+      Caparica Campus<br>
+      2825-516 Caparica, Portugal
+    </div>
+    <div class="footer-col">
+      <strong>Contact</strong>
+      carla.ferreira <em>at</em> fct.unl.pt<br>
+      +351 212 948 536 (ext. 10723)<br>
+      Office P3/14 (Building II)
+    </div>
+    <div class="footer-col">
+      <strong>Profiles</strong>
+      <a href="https://scholar.google.com/citations?hl=en&amp;user=l7GG8NoAAAAJ">Google Scholar</a><br>
+      <a href="https://dblp.org/pid/13/5457.html">DBLP</a><br>
+      <a href="https://orcid.org/0000-0003-3680-7634">ORCID</a><br>
+      <a href="https://www.scopus.com/authid/detail.url?authorId=22733423900">Scopus</a>
+    </div>
   </div>
+  <div class="footer-base">© 2026 Carla Ferreira · NOVA University of Lisbon · NOVA LINCS</div>
 </footer>
 <script src="script.js"></script>
 </body>
