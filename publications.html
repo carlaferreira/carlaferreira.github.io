@@ -4,12 +4,23 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Publications — Carla Ferreira</title>
+<script>
+(function () {
+  var t = localStorage.getItem("theme") ||
+    (window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
+  document.documentElement.dataset.theme = t;
+})();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<canvas id="net" aria-hidden="true"></canvas>
 <header>
   <div class="header-inner">
-    <a class="site-title" href="index.html">Carla Ferreira</a>
+    <a class="site-title" href="index.html">Carla Ferreira<span class="dot">.</span></a>
     <nav>
       <a href="index.html">Home</a>
       <a href="research.html">Research</a>
@@ -18,13 +29,14 @@
       <a href="students.html">Students</a>
       <a href="contact.html">Contact</a>
     </nav>
+    <button id="theme-toggle" aria-label="Toggle color theme"></button>
   </div>
 </header>
 
 <main>
-  <h1>Publications</h1>
+  <h1><span class="grad">Publications</span></h1>
 
-  <h2>2024</h2>
+  <h2><span class="year-chip">2024</span></h2>
   <ul class="pubs">
     <li>E. Schiebelbein, S. Hatia, A. Bieniusa, C. Ferreira, G. Petri, and M. Shapiro.
       <span class="title">Models for Storage in Database Backends.</span>
@@ -40,7 +52,7 @@
       <span class="pub-links">[<a href="https://doi.org/10.1007/s10009-024-00740-7">paper</a>] [<a href="bibtex/PedroSSLSF24.bib">bibtex</a>]</span></li>
   </ul>
 
-  <h2>2023</h2>
+  <h2><span class="year-chip">2023</span></h2>
   <ul class="pubs">
     <li>K. De Porre, C. Ferreira, and E. Gonzalez Boix.
       <span class="title">VeriFx: Correct Replicated Data Types for the Masses.</span>
@@ -60,7 +72,7 @@
       <span class="pub-links">[<a href="https://arxiv.org/abs/2305.03361">paper</a>]</span></li>
   </ul>
 
-  <h2>2022</h2>
+  <h2><span class="year-chip">2022</span></h2>
   <ul class="pubs">
     <li>J. Costa Seco, H. Lourenço, J. Parreira, and C. Ferreira.
       <span class="title">Nested OSTRICH: hatching compositions of low-code templates.</span>
@@ -76,7 +88,7 @@
       <span class="pub-links">[<a href="https://doi.org/10.1007/978-3-031-15008-1_11">paper</a>] [<a href="bibtex/PedroSSLSF22.bib">bibtex</a>]</span></li>
   </ul>
 
-  <h2>2021</h2>
+  <h2><span class="year-chip">2021</span></h2>
   <ul class="pubs">
     <li>K. De Porre, C. Ferreira, N. Preguiça, and E. Gonzalez Boix.
       <span class="title">ECROs: Building Global Scale Systems from Sequential Code.</span>
@@ -100,7 +112,7 @@
       <span class="pub-links">[<a href="https://arxiv.org/abs/2103.04828">paper</a>]</span></li>
   </ul>
 
-  <h2>2020</h2>
+  <h2><span class="year-chip">2020</span></h2>
   <ul class="pubs">
     <li>J. Costa Seco, P. Ferreira, H. Lourenço, C. Ferreira, and L. Ferrão.
       <span class="title">Robust Contract Evolution in a TypeSafe MicroServices Architecture.</span>
@@ -120,7 +132,7 @@
       <span class="pub-links">[<a href="https://doi.org/10.1145/3417990.3420209">paper</a>] [<a href="bibtex/JacintoLF20.bib">bibtex</a>]</span></li>
   </ul>
 
-  <h2>2019</h2>
+  <h2><span class="year-chip">2019</span></h2>
   <ul class="pubs">
     <li>C. Ferreira.
       <span class="title">Techniques for safe and highly available cloud applications.</span>
@@ -132,7 +144,7 @@
       <span class="pub-links">[<a href="https://arxiv.org/abs/1902.03576">paper</a>]</span></li>
   </ul>
 
-  <h2>2018</h2>
+  <h2><span class="year-chip">2018</span></h2>
   <ul class="pubs">
     <li>V. Balegas, S. Duarte, C. Ferreira, R. Rodrigues, and N. Preguiça.
       <span class="title">IPA: invariant-preserving applications for weakly consistent replicated databases.</span>
@@ -140,7 +152,7 @@
       <span class="pub-links">[<a href="https://doi.org/10.14778/3297753.3297760">paper</a>] [<a href="bibtex/BalegasDFRP18.bib">bibtex</a>]</span></li>
   </ul>
 
-  <h2>2017</h2>
+  <h2><span class="year-chip">2017</span></h2>
   <ul class="pubs">
     <li>R. Dias, C. Ferreira, J. Fiedor, J. Lourenço, A. Smrcka, D. Sousa, and T. Vojnar.
       <span class="title">Verifying concurrent programs using contracts.</span>
@@ -156,7 +168,7 @@
       <span class="pub-links">[<a href="http://bulletin.eatcs.org/index.php/beatcs/article/view/507">paper</a>] [<a href="bibtex/BaqueroACF17.bib">bibtex</a>]</span></li>
   </ul>
 
-  <h2>2016</h2>
+  <h2><span class="year-chip">2016</span></h2>
   <ul class="pubs">
     <li>M. Najafzadeh, A. Gotsman, H. Yang, C. Ferreira, and M. Shapiro.
       <span class="title">The CISE tool: proving weakly-consistent applications correct.</span>
@@ -168,7 +180,7 @@
       <span class="pub-links">[<a href="https://doi.org/10.1145/2914770.2837625">paper</a>] [<a href="bibtex/GotsmanYFNS16.bib">bibtex</a>]</span></li>
   </ul>
 
-  <h2>2015</h2>
+  <h2><span class="year-chip">2015</span></h2>
   <ul class="pubs">
     <li>V. Balegas, D. Serra, S. Duarte, C. Ferreira, M. Shapiro, R. Rodrigues, and N. Preguiça.
       <span class="title">Extending Eventually Consistent Cloud Databases for Enforcing Numeric Invariants.</span>
@@ -184,7 +196,7 @@
       <span class="pub-links">[<a href="https://dl.acm.org/doi/10.1145/2723872.2723889">paper</a>]</span></li>
   </ul>
 
-  <h2>2012</h2>
+  <h2><span class="year-chip">2012</span></h2>
   <ul class="pubs">
     <li>R. Bruni, C. Ferreira, and A. Kersten Kauer.
       <span class="title">First-order dynamic logic for compensable processes.</span>
@@ -196,7 +208,7 @@
       <span class="pub-links">[<a href="https://www.sciencedirect.com/science/article/pii/S1567832612000409">paper</a>]</span></li>
   </ul>
 
-  <h2>2011</h2>
+  <h2><span class="year-chip">2011</span></h2>
   <ul class="pubs">
     <li>C. Ferreira, I. Lanese, A. Ravara, H. Vieira, and G. Zavattaro.
       <span class="title">Advanced mechanisms for service combination and transactions.</span>
@@ -204,7 +216,7 @@
       <span class="pub-links">[<a href="https://link.springer.com/chapter/10.1007%2F978-3-642-20401-2_14">paper</a>]</span></li>
   </ul>
 
-  <h2>2010</h2>
+  <h2><span class="year-chip">2010</span></h2>
   <ul class="pubs">
     <li>L. Caires, C. Ferreira, and A. Ravara.
       <span class="title">A simple proof system for lock-free concurrency.</span>
@@ -220,7 +232,7 @@
       <span class="pub-links">[<a href="https://link.springer.com/chapter/10.1007/978-3-642-14458-5_10">paper</a>]</span></li>
   </ul>
 
-  <h2>2009</h2>
+  <h2><span class="year-chip">2009</span></h2>
   <ul class="pubs">
     <li>C. Vaz, C. Ferreira, and A. Ravara.
       <span class="title">Dynamic recovering of long running transactions.</span>
@@ -232,7 +244,7 @@
       <span class="pub-links">[<a href="https://link.springer.com/chapter/10.1007%2F978-3-642-00945-7_6">paper</a>]</span></li>
   </ul>
 
-  <h2>2005</h2>
+  <h2><span class="year-chip">2005</span></h2>
   <ul class="pubs">
     <li>M. Butler, C. Ferreira, and M.Y. Ng.
       <span class="title">Precise modelling of compensating business transactions and its application to BPEL.</span>
@@ -248,7 +260,7 @@
       <span class="pub-links">[<a href="https://link.springer.com/chapter/10.1007/11539452_30">paper</a>]</span></li>
   </ul>
 
-  <h2>2004</h2>
+  <h2><span class="year-chip">2004</span></h2>
   <ul class="pubs">
     <li>M. Butler and C. Ferreira.
       <span class="title">An operational semantics for StAC, a language for modelling long-running business transactions.</span>
@@ -256,7 +268,7 @@
       <span class="pub-links">[<a href="https://link.springer.com/chapter/10.1007/978-3-540-24634-3_9">paper</a>]</span></li>
   </ul>
 
-  <h2>2003</h2>
+  <h2><span class="year-chip">2003</span></h2>
   <ul class="pubs">
     <li>C. Ferreira and M. Butler.
       <span class="title">Using B refinement to analyse compensating business processes.</span>
@@ -288,7 +300,7 @@
       <span class="pub-links">[<a href="https://arxiv.org/abs/1111.2826">paper</a>]</span></li>
   </ul>
 
-  <h2>2002</h2>
+  <h2><span class="year-chip">2002</span></h2>
   <ul class="pubs">
     <li>M. Chessell, D. Vines, C. Griffen, M. Butler, C. Ferreira, and P. Henderson.
       <span class="title">Extending the concept of transaction compensation.</span>
@@ -296,7 +308,7 @@
       <span class="pub-links">[<a href="https://ieeexplore.ieee.org/document/5386884">paper</a>]</span></li>
   </ul>
 
-  <h2>2001</h2>
+  <h2><span class="year-chip">2001</span></h2>
   <ul class="pubs">
     <li>M. Leuschel, L. Adhianto, M. Butler, C. Ferreira, and L. Mikhailov.
       <span class="title">Animation and model checking of CSP and B.</span>
@@ -304,7 +316,7 @@
       <span class="pub-links">[<a href="https://eprints.soton.ac.uk/256022/">paper</a>]</span></li>
   </ul>
 
-  <h2>2000</h2>
+  <h2><span class="year-chip">2000</span></h2>
   <ul class="pubs">
     <li>M. Butler and C. Ferreira.
       <span class="title">A process compensation language.</span>
@@ -312,7 +324,7 @@
       <span class="pub-links">[<a href="https://link.springer.com/chapter/10.1007/3-540-40911-4_5">paper</a>]</span></li>
   </ul>
 
-  <h2>Theses</h2>
+  <h2><span class="year-chip">Theses</span></h2>
   <ul class="pubs">
     <li>C. Ferreira.
       <span class="title">Precise modelling of business processes with compensation.</span>
@@ -324,7 +336,11 @@
 </main>
 
 <footer>
-  <div class="footer-inner">© 2026 Carla Ferreira</div>
+  <div class="footer-inner">
+    <span>© 2026 Carla Ferreira</span>
+    <span>NOVA University of Lisbon · NOVA LINCS</span>
+  </div>
 </footer>
+<script src="script.js"></script>
 </body>
 </html>

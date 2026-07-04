@@ -4,12 +4,23 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Research — Carla Ferreira</title>
+<script>
+(function () {
+  var t = localStorage.getItem("theme") ||
+    (window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
+  document.documentElement.dataset.theme = t;
+})();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<canvas id="net" aria-hidden="true"></canvas>
 <header>
   <div class="header-inner">
-    <a class="site-title" href="index.html">Carla Ferreira</a>
+    <a class="site-title" href="index.html">Carla Ferreira<span class="dot">.</span></a>
     <nav>
       <a href="index.html">Home</a>
       <a href="research.html" class="current">Research</a>
@@ -18,53 +29,103 @@
       <a href="students.html">Students</a>
       <a href="contact.html">Contact</a>
     </nav>
+    <button id="theme-toggle" aria-label="Toggle color theme"></button>
   </div>
 </header>
 
 <main>
-  <h1>Research</h1>
+  <h1><span class="grad">Research</span></h1>
 
-  <h2>Research interests</h2>
-  <ul>
-    <li><strong>Models of concurrency and distribution:</strong> design models, languages,
+  <h2>Interests</h2>
+  <ul class="interests">
+    <li><strong>Models of concurrency and distribution</strong> — design models, languages,
       and tools to express and reason about concurrent and distributed systems, addressing
       aspects as data replication.</li>
-    <li><strong>Foundations of cloud computing:</strong> design of programming models that
+    <li><strong>Foundations of cloud computing</strong> — design of programming models that
       capture the abstractions of large-scale distributed systems.</li>
-    <li><strong>Language-based techniques for low-code software development.</strong></li>
+    <li><strong>Language-based techniques</strong> for low-code software development.</li>
   </ul>
 
   <h2>Current projects</h2>
-  <ul class="clean">
-    <li><a href="https://www.project-tardis.eu">TaRDIS</a> — Trustworthy and Resilient
-      Decentralised Intelligence for Edge Systems (EU Horizon Europe)</li>
+  <ul class="card-grid">
+    <li class="card">
+      <a class="card-title" href="https://www.project-tardis.eu">TaRDIS</a>
+      <span class="card-sub">Trustworthy and Resilient Decentralised Intelligence for Edge Systems</span>
+      <span class="tag">EU Horizon Europe</span>
+    </li>
   </ul>
 
   <h2>Past projects</h2>
-  <ul class="clean">
-    <li><a href="https://carlaferreira.github.io/precise.project/">PRECISE</a> — A correct
-      by design methodology for available cloud applications (FCT/MCTES/PT)</li>
-    <li><a href="https://cmuportugal.org/large-scale-collaborative-research-projects/golem/">GOLEM</a>
-      — Automated programming to revolutionize app development (Carnegie Mellon|Portugal)</li>
-    <li><a href="https://lightkone.eu/">LightKone</a> (H2020/EU)</li>
-    <li><a href="http://www.revcomp.eu/">Reversible Computation</a> (COST Action/EU)</li>
-    <li>Clay (FCT/MCTES/PT)</li>
-    <li><a href="https://syncfree.lip6.fr/">SyncFree</a> (FP7/EU)</li>
-    <li><a href="http://ctp.di.fct.unl.pt/INTERFACES/NGN44About.html">Certified Interfaces</a>
-      (Carnegie Mellon|Portugal)</li>
-    <li>StreamLine (FCT/MCTES/PT)</li>
-    <li><a href="https://sensoria-ist.eu/">IP Sensoria</a> — Software Engineering for
-      Service-Oriented Overlay Computers (EU IST)</li>
-    <li>IP MATISSE — Methodologies and technologies for industrial strength systems
-      engineering (EU IST)</li>
-    <li>ABCD — Automated Validation of Business Critical Systems with Component Based
-      Designs (UK EPSRC)</li>
-    <li>High-Integrity Component-Based Engineering for Enterprise Systems (IBM UK Labs)</li>
+  <ul class="card-grid">
+    <li class="card">
+      <a class="card-title" href="https://carlaferreira.github.io/precise.project/">PRECISE</a>
+      <span class="card-sub">A correct by design methodology for available cloud applications</span>
+      <span class="tag">FCT/MCTES/PT</span>
+    </li>
+    <li class="card">
+      <a class="card-title" href="https://cmuportugal.org/large-scale-collaborative-research-projects/golem/">GOLEM</a>
+      <span class="card-sub">Automated programming to revolutionize app development</span>
+      <span class="tag">Carnegie Mellon|Portugal</span>
+    </li>
+    <li class="card">
+      <a class="card-title" href="https://lightkone.eu/">LightKone</a>
+      <span class="card-sub">Lightweight computation for networks at the edge</span>
+      <span class="tag">H2020/EU</span>
+    </li>
+    <li class="card">
+      <a class="card-title" href="http://www.revcomp.eu/">Reversible Computation</a>
+      <span class="card-sub">Extending horizons of computing</span>
+      <span class="tag">COST Action/EU</span>
+    </li>
+    <li class="card">
+      <span class="card-title">Clay</span>
+      <span class="card-sub">&nbsp;</span>
+      <span class="tag">FCT/MCTES/PT</span>
+    </li>
+    <li class="card">
+      <a class="card-title" href="https://syncfree.lip6.fr/">SyncFree</a>
+      <span class="card-sub">Large-scale computation without synchronisation</span>
+      <span class="tag">FP7/EU</span>
+    </li>
+    <li class="card">
+      <a class="card-title" href="http://ctp.di.fct.unl.pt/INTERFACES/NGN44About.html">Certified Interfaces</a>
+      <span class="card-sub">&nbsp;</span>
+      <span class="tag">Carnegie Mellon|Portugal</span>
+    </li>
+    <li class="card">
+      <span class="card-title">StreamLine</span>
+      <span class="card-sub">&nbsp;</span>
+      <span class="tag">FCT/MCTES/PT</span>
+    </li>
+    <li class="card">
+      <a class="card-title" href="https://sensoria-ist.eu/">IP Sensoria</a>
+      <span class="card-sub">Software Engineering for Service-Oriented Overlay Computers</span>
+      <span class="tag">EU IST</span>
+    </li>
+    <li class="card">
+      <span class="card-title">IP MATISSE</span>
+      <span class="card-sub">Methodologies and technologies for industrial strength systems engineering</span>
+      <span class="tag">EU IST</span>
+    </li>
+    <li class="card">
+      <span class="card-title">ABCD</span>
+      <span class="card-sub">Automated Validation of Business Critical Systems with Component Based Designs</span>
+      <span class="tag">UK EPSRC</span>
+    </li>
+    <li class="card">
+      <span class="card-title">High-Integrity Component-Based Engineering</span>
+      <span class="card-sub">for Enterprise Systems</span>
+      <span class="tag">IBM UK Labs</span>
+    </li>
   </ul>
 </main>
 
 <footer>
-  <div class="footer-inner">© 2026 Carla Ferreira</div>
+  <div class="footer-inner">
+    <span>© 2026 Carla Ferreira</span>
+    <span>NOVA University of Lisbon · NOVA LINCS</span>
+  </div>
 </footer>
+<script src="script.js"></script>
 </body>
 </html>

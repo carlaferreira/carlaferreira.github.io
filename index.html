@@ -5,12 +5,23 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Carla Ferreira</title>
 <meta name="description" content="Carla Ferreira — Professor at the Computer Science Department, NOVA University of Lisbon, and researcher at NOVA LINCS.">
+<script>
+(function () {
+  var t = localStorage.getItem("theme") ||
+    (window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
+  document.documentElement.dataset.theme = t;
+})();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<canvas id="net" aria-hidden="true"></canvas>
 <header>
   <div class="header-inner">
-    <a class="site-title" href="index.html">Carla Ferreira</a>
+    <a class="site-title" href="index.html">Carla Ferreira<span class="dot">.</span></a>
     <nav>
       <a href="index.html" class="current">Home</a>
       <a href="research.html">Research</a>
@@ -19,25 +30,17 @@
       <a href="students.html">Students</a>
       <a href="contact.html">Contact</a>
     </nav>
+    <button id="theme-toggle" aria-label="Toggle color theme"></button>
   </div>
 </header>
 
 <main>
-  <div class="profile">
-    <img src="assets/cf.jpg" alt="Portrait of Carla Ferreira">
-    <div class="profile-text">
-      <h1>Carla Ferreira</h1>
-      <p class="lead">I am a Professor at the
-        <a href="https://www.di.fct.unl.pt/">Computer Science Department</a> of the
-        <a href="https://www.fct.unl.pt/">NOVA University of Lisbon</a>, and a researcher at the
-        <a href="https://nova-lincs.di.fct.unl.pt/">NOVA Laboratory for Computer Science and Informatics</a>
-        (NOVA LINCS) in the Software Systems research group.</p>
-      <p>I started my academic career as an Assistant at
-        <a href="https://www.uminho.pt/">Universidade do Minho</a>. After that, I joined the
-        <a href="https://www.southampton.ac.uk/research/groups/cyber-physical-systems">Dependable Systems &amp; Software Engineering Group</a>
-        (DSSE) of the <a href="https://www.soton.ac.uk/">University of Southampton</a>,
-        first as a PhD student and later as a research fellow. After returning to Portugal
-        in 2003, I was an Assistant Professor at <a href="https://tecnico.ulisboa.pt/">IST</a>.</p>
+  <section class="hero">
+    <div class="hero-text">
+      <p class="kicker">Professor · NOVA University of Lisbon</p>
+      <h1>Hi, I'm <span class="grad">Carla Ferreira</span>.</h1>
+      <p class="lead">I design languages, models, and verification techniques that make
+        concurrent and distributed systems trustworthy.</p>
       <div class="links-row">
         <a href="https://scholar.google.com/citations?hl=en&amp;user=l7GG8NoAAAAJ">Google Scholar</a>
         <a href="https://dblp.org/pid/13/5457.html">DBLP</a>
@@ -45,11 +48,32 @@
         <a href="https://www.scopus.com/authid/detail.url?authorId=22733423900">Scopus</a>
       </div>
     </div>
-  </div>
+    <div class="portrait-wrap">
+      <img class="portrait" src="assets/cf.jpg" alt="Portrait of Carla Ferreira">
+    </div>
+  </section>
+
+  <section class="bio">
+    <p>I am a Professor at the
+      <a href="https://www.di.fct.unl.pt/">Computer Science Department</a> of the
+      <a href="https://www.fct.unl.pt/">NOVA University of Lisbon</a>, and a researcher at the
+      <a href="https://nova-lincs.di.fct.unl.pt/">NOVA Laboratory for Computer Science and Informatics</a>
+      (NOVA LINCS) in the Software Systems research group.</p>
+    <p>I started my academic career as an Assistant at
+      <a href="https://www.uminho.pt/">Universidade do Minho</a>. After that, I joined the
+      <a href="https://www.southampton.ac.uk/research/groups/cyber-physical-systems">Dependable Systems &amp; Software Engineering Group</a>
+      (DSSE) of the <a href="https://www.soton.ac.uk/">University of Southampton</a>,
+      first as a PhD student and later as a research fellow. After returning to Portugal
+      in 2003, I was an Assistant Professor at <a href="https://tecnico.ulisboa.pt/">IST</a>.</p>
+  </section>
 </main>
 
 <footer>
-  <div class="footer-inner">© 2026 Carla Ferreira</div>
+  <div class="footer-inner">
+    <span>© 2026 Carla Ferreira</span>
+    <span>NOVA University of Lisbon · NOVA LINCS</span>
+  </div>
 </footer>
+<script src="script.js"></script>
 </body>
 </html>
