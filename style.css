@@ -276,7 +276,24 @@ ul.interests li::before {
   color: transparent;
 }
 
+ul.interests .key {
+  display: block;
+  margin-top: 0.35rem;
+  font-size: 0.88rem;
+  color: var(--text-muted);
+}
+
+.card .tag a { color: inherit; }
+
 /* ---------- publications ---------- */
+
+.pub-intro { color: var(--text-muted); font-size: 0.95rem; margin: -0.6rem 0 1rem; }
+
+ul.pubs > li:target {
+  border-color: var(--grad-a);
+  box-shadow: var(--shadow);
+}
+ul.pubs > li { scroll-margin-top: 5rem; }
 
 .year-chip {
   display: inline-block;

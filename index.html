@@ -22,6 +22,35 @@
   <meta property="og:image" content="https://carlaferreira.github.io/assets/cf.jpg">
   <meta name="twitter:card" content="summary">
   <link rel="stylesheet" href="style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Carla Ferreira",
+    "givenName": "Carla",
+    "familyName": "Ferreira",
+    "jobTitle": "Full Professor",
+    "url": "https://carlaferreira.github.io/",
+    "image": "https://carlaferreira.github.io/assets/cf.jpg",
+    "affiliation": {
+      "@type": "Organization",
+      "name": "NOVA School of Science and Technology, NOVA University Lisbon",
+      "url": "https://www.fct.unl.pt/"
+    },
+    "worksFor": {
+      "@type": "Organization",
+      "name": "NOVA LINCS",
+      "url": "https://nova-lincs.di.fct.unl.pt/"
+    },
+    "knowsAbout": ["Distributed systems", "Replicated data types", "Formal verification",
+      "Concurrency theory", "Low-code development"],
+    "sameAs": [
+      "https://scholar.google.com/citations?user=l7GG8NoAAAAJ",
+      "https://dblp.org/pid/13/5457.html",
+      "https://orcid.org/0000-0003-3680-7634"
+    ]
+  }
+  </script>
 </head>
 
 <body>
@@ -84,8 +113,13 @@
       <h2>News</h2>
       <ul class="news">
         <li><span class="news-date">2026</span>
-          <span>Two papers accepted at ICST 2026: systematic API testing through model
-            checking, and orchestrating causality in actor-based systems.</span>
+          <span>Two papers at ICST 2026:
+            <a href="https://doi.org/10.1109/ICST69053.2026.00060">systematic API testing through
+              model checking</a>, and
+            <a href="https://doi.org/10.1109/ICST69053.2026.00065">orchestrating causality in
+              actor-based systems</a>. Preprints on arXiv
+            (<a href="https://arxiv.org/abs/2604.08633">1</a>,
+            <a href="https://arxiv.org/abs/2603.17909">2</a>).</span>
         </li>
         <li><span class="news-date">2026</span>
           <span>Serving on the program committees of ESOP 2027 and FM 2026.</span>
@@ -104,26 +138,45 @@
     <section>
       <h2>Selected publications</h2>
       <ul class="pubs">
-        <li>A. Gotsman, H. Yang, C. Ferreira, M. Najafzadeh, and M. Shapiro.
-          <span class="title">'Cause I'm strong enough: reasoning about consistency choices in distributed
-            systems.</span>
-          <span class="venue">POPL 2016: Symposium on Principles of Programming Languages.</span>
-          <span class="pub-links">[<a href="https://doi.org/10.1145/2914770.2837625">paper</a>]</span>
+        <li>D. Borrego, N. Preguiça, E. Gonzalez Boix, and C. Ferreira.
+          <span class="title">Ensuring Convergence and Invariants Without Coordination.</span>
+          <span class="venue">ECOOP 2025: European Conference on Object-Oriented Programming.</span>
+          <span class="pub-links">[<a href="https://doi.org/10.4230/LIPIcs.ECOOP.2025.4">paper</a>] [<a
+              href="https://doi.org/10.4230/DARTS.11.2.1">artifact</a>] [<a
+              href="bibtex/Borrego25.bib">bibtex</a>]</span>
         </li>
-        <li>V. Balegas, S. Duarte, C. Ferreira, R. Rodrigues, N. Preguiça, M. Najafzadeh, and M. Shapiro.
-          <span class="title">Putting the Consistency back into Eventual Consistency.</span>
-          <span class="venue">EuroSys 2015: European Conference on Computer Systems.</span>
-          <span class="pub-links">[<a href="https://dl.acm.org/doi/10.1145/2741948.2741972">paper</a>]</span>
-        </li>
-        <li>M. Butler, C.A.R. Hoare, and C. Ferreira.
-          <span class="title">A trace semantics for long-running transactions.</span>
-          <span class="venue">In Communicating Sequential Processes: The First 25 Years, LNCS 3525, 2005.</span>
-          <span class="pub-links">[<a href="https://link.springer.com/chapter/10.1007%2F11423348_8">paper</a>]</span>
+        <li>K. De Porre, C. Ferreira, and E. Gonzalez Boix.
+          <span class="title">VeriFx: Correct Replicated Data Types for the Masses.</span>
+          <span class="venue">ECOOP 2023: European Conference on Object-Oriented Programming.</span>
+          <span class="pub-links">[<a href="https://doi.org/10.4230/LIPIcs.ECOOP.2023.9">paper</a>] [<a
+              href="https://github.com/verifx-prover/verifx">code</a>] [<a
+              href="bibtex/Porre0B23.bib">bibtex</a>]</span>
         </li>
         <li>K. De Porre, C. Ferreira, N. Preguiça, and E. Gonzalez Boix.
           <span class="title">ECROs: Building Global Scale Systems from Sequential Code.</span>
           <span class="venue">OOPSLA 2021: Object-Oriented Programming, Systems, Languages &amp; Applications.</span>
-          <span class="pub-links">[<a href="https://doi.org/10.1145/3485484">paper</a>]</span>
+          <span class="pub-links">[<a href="https://doi.org/10.1145/3485484">paper</a>] [<a
+              href="https://doi.org/10.5281/zenodo.5510036">artifact</a>] [<a
+              href="bibtex/PorreFPB21.bib">bibtex</a>]</span>
+        </li>
+        <li>A. Gotsman, H. Yang, C. Ferreira, M. Najafzadeh, and M. Shapiro.
+          <span class="title">'Cause I'm strong enough: reasoning about consistency choices in distributed
+            systems.</span>
+          <span class="venue">POPL 2016: Symposium on Principles of Programming Languages.</span>
+          <span class="pub-links">[<a href="https://doi.org/10.1145/2914770.2837625">paper</a>] [<a
+              href="bibtex/GotsmanYFNS16.bib">bibtex</a>]</span>
+        </li>
+        <li>V. Balegas, S. Duarte, C. Ferreira, R. Rodrigues, N. Preguiça, M. Najafzadeh, and M. Shapiro.
+          <span class="title">Putting the Consistency back into Eventual Consistency.</span>
+          <span class="venue">EuroSys 2015: European Conference on Computer Systems.</span>
+          <span class="pub-links">[<a href="https://dl.acm.org/doi/10.1145/2741948.2741972">paper</a>] [<a
+              href="bibtex/Balegas15b.bib">bibtex</a>]</span>
+        </li>
+        <li>M. Butler, C.A.R. Hoare, and C. Ferreira.
+          <span class="title">A trace semantics for long-running transactions.</span>
+          <span class="venue">In Communicating Sequential Processes: The First 25 Years, LNCS 3525, 2005.</span>
+          <span class="pub-links">[<a href="https://link.springer.com/chapter/10.1007%2F11423348_8">paper</a>] [<a
+              href="bibtex/Butler05b.bib">bibtex</a>]</span>
         </li>
       </ul>
       <a class="more-link" href="publications.html">All publications →</a>

@@ -46,15 +46,44 @@
       <li><strong>Consistency and safety of replicated data</strong> — principled techniques
         for highly available systems, from replicated data types (CRDTs) to invariant
         preservation and coordination avoidance in geo-replicated, edge, and local-first
-        settings.</li>
+        settings.
+        <span class="key">Start here:
+          <a href="publications.html#GotsmanYFNS16">POPL 2016</a> ·
+          <a href="publications.html#Balegas15b">EuroSys 2015</a> ·
+          <a href="publications.html#BalegasDFRP18">VLDB 2018</a> ·
+          <a href="publications.html#PorreFPB21">OOPSLA 2021</a> ·
+          <a href="publications.html#Borrego25">ECOOP 2025</a>.
+          Tools: <a href="#software">VeriFx, ECROs, No-Op</a>.</span>
+      </li>
       <li><strong>Verification of concurrent and distributed systems</strong> — proof tools,
         model checking, runtime monitoring, and automated testing that help programmers
-        establish the correctness of distributed applications.</li>
+        establish the correctness of distributed applications.
+        <span class="key">Start here:
+          <a href="publications.html#Porre0B23">ECOOP 2023</a> ·
+          <a href="publications.html#NajafzadehGYFS16">PaPoC 2016</a> ·
+          <a href="publications.html#DiasFFLSSV17">ICST 2017</a> ·
+          <a href="publications.html#PedroSSLSF24">STTT 2024</a> ·
+          <a href="publications.html#Ribeiro26">ICST 2026</a>.
+          Tools: <a href="#software">VeriFx, CISE3, JepREST</a>.</span>
+      </li>
       <li><strong>Formal models of concurrency</strong> — process calculi and semantics for
         reasoning about distributed computations, from compensating long-running transactions
-        to reversible computation and causality in actor-based systems.</li>
+        to reversible computation and causality in actor-based systems.
+        <span class="key">Start here:
+          <a href="publications.html#Butler05b">CSP25 2005</a> ·
+          <a href="publications.html#Butler04">COORD 2004</a> ·
+          <a href="publications.html#Bruni05">CONCUR 2005</a> ·
+          <a href="publications.html#Lanese10">ESOP 2010</a> ·
+          <a href="publications.html#Mikytiv26">ICST 2026</a>.</span>
+      </li>
       <li><strong>Language-based techniques for low-code software development</strong> —
-        type-safe templates, program synthesis, and testing for low-code platforms.</li>
+        type-safe templates, program synthesis, and testing for low-code platforms.
+        <span class="key">Start here:
+          <a href="publications.html#LourencoFS21">MoDELS 2021</a> ·
+          <a href="publications.html#LourencoFSP23">SoSyM 2023</a> ·
+          <a href="publications.html#SecoACT022">Onward! 2022</a> ·
+          <a href="publications.html#JacintoLF20">LowCode 2020</a>.</span>
+      </li>
     </ul>
 
     <h2>Current projects</h2>
@@ -133,6 +162,49 @@
         <span class="card-title">HICBE</span>
         <span class="card-sub">High-Integrity Component-Based Engineering for Enterprise Systems</span><br>
         <span class="tag">IBM Hursley UK · 2000-2003</span>
+      </li>
+    </ul>
+
+    <h2 id="software">Software and artifacts</h2>
+    <p class="note">Open tools from my group and collaborators. Each links to the paper to cite.</p>
+    <ul class="card-grid">
+      <li class="card">
+        <a class="card-title" href="https://github.com/verifx-prover/verifx">VeriFx</a>
+        <span class="card-sub">A language for replicated data types with automated proofs of
+          convergence. Verified types transpile to Scala and JavaScript.</span>
+        <span class="tag"><a href="publications.html#Porre0B23">Cite: ECOOP 2023</a> ·
+          <a href="https://doi.org/10.4230/DARTS.9.2.19">Artifact</a></span>
+      </li>
+      <li class="card">
+        <a class="card-title" href="https://doi.org/10.5281/zenodo.5510036">ECROs</a>
+        <span class="card-sub">Explicitly Consistent Replicated Objects: derive a correct
+          replicated type from sequential Scala code plus a distributed specification.</span>
+        <span class="tag"><a href="publications.html#PorreFPB21">Cite: OOPSLA 2021</a></span>
+      </li>
+      <li class="card">
+        <a class="card-title" href="https://doi.org/10.4230/DARTS.11.2.1">No-Op</a>
+        <span class="card-sub">Framework that guarantees convergence and application invariants
+          without coordination, mechanised in VeriFx with CRDT and auction case studies.</span>
+        <span class="tag"><a href="publications.html#Borrego25">Cite: ECOOP 2025</a></span>
+      </li>
+      <li class="card">
+        <a class="card-title" href="https://arxiv.org/abs/2010.06622">CISE3</a>
+        <span class="card-sub">Why3-based analysis that finds which operations of a replicated
+          application need synchronisation to preserve invariants.</span>
+        <span class="tag"><a href="publications.html#Meirim20">Cite: CISE3 (2020)</a> ·
+          <a href="publications.html#NajafzadehGYFS16">CISE (2016)</a></span>
+      </li>
+      <li class="card">
+        <a class="card-title" href="https://github.com/AntidoteDB/antidote_aql">Antidote SQL</a>
+        <span class="card-sub">SQL interface for the AntidoteDB CRDT store, with relaxed or strict
+          semantics chosen per table and constraint.</span>
+        <span class="tag"><a href="publications.html#Lopes19">Cite: Antidote SQL (2019)</a></span>
+      </li>
+      <li class="card">
+        <a class="card-title" href="https://arxiv.org/abs/2303.14104">JepREST</a>
+        <span class="card-sub">Jepsen-based linearizability testing for applications with a REST
+          interface, generated from the service specification.</span>
+        <span class="tag"><a href="publications.html#Simoes23">Cite: JepREST (2023)</a></span>
       </li>
     </ul>
 
@@ -228,7 +300,7 @@
         <strong>Contact</strong>
         carla.ferreira <em>at</em> fct.unl.pt<br>
         +351 212 948 536 (ext. 10723)<br>
-        Office P3/14 (Building II)
+        Office P2/14 (Building II)
       </div>
       <div class="footer-col">
         <strong>Profiles</strong>
@@ -237,7 +309,7 @@
         <a href="https://orcid.org/0000-0003-3680-7634">ORCID</a>
       </div>
     </div>
-    <div class="footer-base">© 2026 Carla Ferreira · NOVA University of Lisbon · NOVA LINCS</div>
+    <div class="footer-base">© 2026 Carla Ferreira · NOVA School of Science and Technology · NOVA LINCS</div>
   </footer>
   <script src="script.js"></script>
 </body>
