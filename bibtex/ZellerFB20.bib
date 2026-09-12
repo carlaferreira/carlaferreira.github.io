@@ -1,20 +1,17 @@
-@inproceedings{DBLP:conf/erlang/0001B020,
-  author       = {Peter Zeller and
-                  Annette Bieniusa and
-                  Carla Ferreira},
-  editor       = {Annette Bieniusa and
-                  Vikt{\'{o}}ria F{\"{o}}rd{\'{o}}s},
-  title        = {Teaching practical realistic verification of distributed algorithms
-                  in Erlang with {TLA+}},
-  booktitle    = {Proceedings of the 19th {ACM} {SIGPLAN} International Workshop on
-                  Erlang, Erlang@ICFP 2020, Virtual Event, USA, August 23, 2020},
-  pages        = {14--23},
-  publisher    = {{ACM}},
-  year         = {2020},
-  url          = {https://doi.org/10.1145/3406085.3409009},
-  doi          = {10.1145/3406085.3409009},
-  timestamp    = {Thu, 14 Oct 2021 10:19:37 +0200},
-  biburl       = {https://dblp.org/rec/conf/erlang/0001B020.bib},
-  bibsource    = {dblp computer science bibliography, https://dblp.org}
+@inproceedings{ZellerFB20,
+author = {Zeller, Peter and Bieniusa, Annette and Ferreira, Carla},
+title = {Teaching practical realistic verification of distributed algorithms in Erlang with TLA+},
+year = {2020},
+isbn = {9781450380492},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3406085.3409009},
+doi = {10.1145/3406085.3409009},
+abstract = {Distributed systems are inherently complex as they need to address the interplay between features like communication, concurrency, and failure. Due to the inherent complexity of these interacting features, it is typically not possible to systematically test these kind of systems; yet, unexpected and unlikely combinations of events might cause corner cases that are hard to find. But since these systems are running typically for long durations, these events are likely to materialize eventually and must be handled correctly. Caught in such a dilemma, students are able to experience the benefits of applying verification tools to check their own algorithms and implementations. Having executable models with automatically generated executions allows them to experiment with different solutions by iteratively adapting and refining their algorithms.  In this experience report, we report on our experience of teaching verification in a (hands-on) distributed systems course. We argue that broadcast algorithms provide a sweet spot in design and verification complexity. To this end, we give an implementation of these algorithms in Erlang and derive a TLA+ specification. TLA+ is a formal language for describing and reasoning about distributed and concurrent systems and provides a model checker, TLC, among other things. Our study reveals interesting parallels between the Erlang and TLA+ code, while exposing the challenges of formally modeling communication and parallelism in distributed systems. Presenting selected aspects of our course design, we aim to motivate the feasibility and need for introducing verification in close correspondence to programming tasks.},
+booktitle = {Proceedings of the 19th ACM SIGPLAN International Workshop on Erlang},
+pages = {14–23},
+numpages = {10},
+keywords = {Broadcast algorithms, Distributed algorithms, Formal verification, TLA+},
+location = {Virtual Event, USA},
+series = {Erlang 2020}
 }
-
